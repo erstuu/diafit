@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/diaPrimary"
+                app:title="@string/result"
+                app:titleTextAppearance="@style/ToolbarTitleText" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="@dimen/lay_img_width_30"
+            android:layout_height="@dimen/lay_img_height_30"
+            android:layout_marginEnd="@dimen/lay_marend_24"
+            android:contentDescription="@string/home"
+            android:src="@drawable/baseline_home_24"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewInputData"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/lay_card_height_570"
+            android:layout_marginTop="@dimen/lay_martop_88"
+            android:background="@color/white"
+            android:contentDescription="@string/result_data"
+            app:cardCornerRadius="@dimen/corner_radius_26"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_24"
+                    android:layout_marginTop="@dimen/lay_martop_16"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/gender"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_result_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/gender"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_gender"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/age"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_gender"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_gender" />
+
+                <TextView
+                    android:id="@+id/tv_result_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/age"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_age"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+                <TextView
+                    android:id="@+id/tv_smoking_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/smoking_history"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_age"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_age" />
+
+                <TextView
+                    android:id="@+id/tv_result_smoking_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/smoking_history"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_smoking_history"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_smoking_history" />
+
+                <TextView
+                    android:id="@+id/tv_heart_disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/heart_disease"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_smoking_history"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_smoking_history" />
+
+                <TextView
+                    android:id="@+id/tv_result_heart_disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/heart_disease"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_heart_disease"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_heart_disease" />
+
+                <TextView
+                    android:id="@+id/tv_hypertension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/hypertension"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_heart_disease"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_heart_disease" />
+
+                <TextView
+                    android:id="@+id/tv_result_hypertension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/hypertension"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_hypertension"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hypertension" />
+
+                <TextView
+                    android:id="@+id/tv_body_mass_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/body_mass_index"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_hypertension"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_hypertension" />
+
+                <TextView
+                    android:id="@+id/tv_result_body_mass_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/body_mass_index"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_body_mass_index"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_body_mass_index" />
+
+                <TextView
+                    android:id="@+id/tv_hemoglobin_a1c_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/hemoglobin_a1c_level"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_body_mass_index"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_body_mass_index" />
+
+                <TextView
+                    android:id="@+id/tv_result_hemoglobin_a1c_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/hemoglobin_a1c_level"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_hemoglobin_a1c_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hemoglobin_a1c_level" />
+
+                <TextView
+                    android:id="@+id/tv_blood_glucose_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_10"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/blood_glucose_evel"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="@+id/tv_result_hemoglobin_a1c_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_hemoglobin_a1c_level" />
+
+                <TextView
+                    android:id="@+id/tv_result_blood_glucose_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:layout_marginBottom="@dimen/lay_marbot_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/blood_glucose_evel"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_blood_glucose_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_blood_glucose_level" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resultCard"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/lay_card_height_110"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewInputData"
+            app:layout_constraintStart_toStartOf="@+id/cardViewInputData"
+            app:layout_constraintTop_toTopOf="@+id/guideline7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_all_set_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_16"
+                    android:layout_marginTop="@dimen/lay_martop_32"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/heres_your_result"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_diabete_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:layout_marginBottom="@dimen/lay_marbot_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/diabete_result"
+                    android:textSize="@dimen/ts_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_all_set_up"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_all_set_up"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lay_marbot_16"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/suggestion"
+            android:textSize="@dimen/ts_16"
+            app:layout_constraintStart_toStartOf="@+id/resultCard"
+            app:layout_constraintTop_toBottomOf="@+id/resultCard" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="638dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:layout_constraintStart_toStartOf="@id/cardViewInputData"
+            app:layout_constraintEnd_toEndOf="@id/cardViewInputData"
+            tools:listitem="@layout/news_item"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

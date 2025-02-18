@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#DD5050</color>
+    <color name="background">#F8F8F8</color>
+    <color name="background_onboarding">#F8F8F8</color>
+    <color name="dark_blue">#0601B8</color>
+    <color name="grey">#F0F0F0</color>
+    <color name="slightly_grey">#E1E0E0</color>
+    <color name="light_green">#43FF00</color>
+    <color name="army">#344C3D</color>
+    <color name="light_army">#738A6E</color>
+    <color name="dark_green">#1C7A00</color>
+    <color name="white_green">#F5F5F5</color>
+    <color name="low_grey">#C6C6C6</color>
+    <color name="grey_mid">#767474</color>
+    <color name="diaPrimary">#0089BD</color>
+    <color name="diaSecondary">#006186</color>
+</resources>

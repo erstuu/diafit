@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rv_item_history"
+        android:layout_width="380dp"
+        android:layout_height="240dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/lay_martop_8"
+        android:layout_marginBottom="@dimen/lay_marbot_8"
+        app:cardCornerRadius="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:text="@string/date_example"
+                android:textSize="16sp"
+                android:elevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_glucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_medium"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/glucose_level"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_date"
+                app:layout_constraintStart_toStartOf="@id/tv_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+            <TextView
+                android:id="@+id/tv_result_glucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/result_level_hemoglobin"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_glucose"
+                app:layout_constraintStart_toStartOf="@id/tv_glucose"
+                app:layout_constraintTop_toBottomOf="@id/tv_glucose" />
+
+            <TextView
+                android:id="@+id/tv_hemoglobin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_medium"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/level_hemoglobin_a1c"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_result_glucose"
+                app:layout_constraintStart_toStartOf="@id/tv_result_glucose"
+                app:layout_constraintTop_toBottomOf="@id/tv_result_glucose" />
+
+            <TextView
+                android:id="@+id/tv_result_hemoglobin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/result_level_hemoglobin"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_hemoglobin"
+                app:layout_constraintStart_toStartOf="@id/tv_hemoglobin"
+                app:layout_constraintTop_toBottomOf="@id/tv_hemoglobin" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_medium"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/diabetes_result"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_result_hemoglobin"
+                app:layout_constraintStart_toStartOf="@id/tv_result_hemoglobin"
+                app:layout_constraintTop_toBottomOf="@id/tv_result_hemoglobin" />
+
+            <TextView
+                android:id="@+id/tv_result_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/results_diabetes_result"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_result"
+                app:layout_constraintStart_toStartOf="@id/tv_result"
+                app:layout_constraintTop_toBottomOf="@id/tv_result" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/diaPrimary"
+            app:title="@string/profile_page"
+            app:titleTextAppearance="@style/ToolbarTitleText" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/lay_img_logo_width"
+        android:layout_height="@dimen/lay_img_logo_height"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/lay_marstar_16"
+        android:layout_marginTop="@dimen/lay_martop_90"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/corner_radius_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_gluco_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_logo" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_message"
+        android:layout_width="@dimen/lay_card_message_width_279"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lay_marstar_16"
+        android:layout_marginEnd="@dimen/lay_marend_16"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView">
+
+        <TextView
+            android:id="@+id/tv_gluco_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunito_bold"
+            android:paddingStart="@dimen/lay_padding_star_16"
+            android:paddingTop="@dimen/lay_padding_top_8"
+            android:paddingEnd="@dimen/lay_padding_end_16"
+            android:text="@string/hi_gluco_friend"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_16" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="@dimen/lay_padding_star_16"
+            android:paddingTop="@dimen/lay_padding_top_32"
+            android:paddingEnd="@dimen/lay_padding_end_16"
+            android:paddingBottom="@dimen/lay_padding_bot_8"
+            android:text="@string/set_your_preferences_here"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_16" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_edit_information"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lay_card_setting_height_70"
+        android:layout_marginTop="@dimen/lay_martop_16"
+        android:contentDescription="@string/edit_information"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_share"
+                android:layout_width="@dimen/lay_card_round_width"
+                android:layout_height="@dimen/lay_card_round_heiht"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="@dimen/corner_radius_50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/iv_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/logo_share"
+                    android:src="@drawable/ic_person_24" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/edit_profile"
+                android:textSize="@dimen/ts_16"
+                app:layout_constraintBottom_toBottomOf="@+id/card_share"
+                app:layout_constraintStart_toEndOf="@+id/card_share"
+                app:layout_constraintTop_toTopOf="@+id/card_share"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_share_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:text="@string/edit_information"
+                android:textSize="@dimen/ts_13"
+                app:layout_constraintBottom_toBottomOf="@+id/card_share"
+                app:layout_constraintStart_toStartOf="@+id/tv_share"
+                app:layout_constraintTop_toBottomOf="@+id/tv_share" />
+
+            <ImageView
+                android:id="@+id/arrow_share"
+                android:layout_width="@dimen/lay_img_arrow_width"
+                android:layout_height="@dimen/lay_img_arrow_height"
+                android:layout_marginEnd="@dimen/lay_marend_16"
+                android:src="@drawable/baseline_arrow_forward_ios_24"
+                android:contentDescription="@string/arrow_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/card_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_share" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_language"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lay_card_setting_height_70"
+        android:layout_marginTop="@dimen/lay_martop_8"
+        android:clickable="true"
+        android:contentDescription="@string/change_language"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_edit_information">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_language"
+                android:layout_width="@dimen/lay_card_round_width"
+                android:layout_height="@dimen/lay_card_round_heiht"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="@dimen/corner_radius_50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/iv_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/logo_change_language"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_language_24" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/change_language"
+                android:textSize="@dimen/ts_16"
+                app:layout_constraintBottom_toBottomOf="@+id/card_language"
+                app:layout_constraintStart_toEndOf="@+id/card_language"
+                app:layout_constraintTop_toTopOf="@+id/card_language"
+                app:layout_constraintVertical_bias="0.17" />
+
+            <TextView
+                android:id="@+id/tv_language_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:text="@string/what_language_do_you_prefer"
+                android:textSize="@dimen/ts_13"
+                app:layout_constraintBottom_toBottomOf="@+id/card_language"
+                app:layout_constraintStart_toStartOf="@+id/tv_language"
+                app:layout_constraintTop_toBottomOf="@+id/tv_language" />
+
+            <ImageView
+                android:id="@+id/arrow_language"
+                android:layout_width="@dimen/lay_img_arrow_width"
+                android:layout_height="@dimen/lay_img_arrow_height"
+                android:layout_marginEnd="@dimen/lay_marend_16"
+                android:src="@drawable/baseline_arrow_forward_ios_24"
+                android:contentDescription="@string/arrow_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/card_language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_language" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lay_card_setting_height_70"
+        android:layout_marginTop="@dimen/lay_martop_8"
+        android:clickable="true"
+        android:contentDescription="@string/sure_want_to_logout"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_language">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_logout"
+                android:layout_width="@dimen/lay_card_round_width"
+                android:layout_height="@dimen/lay_card_round_heiht"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="@dimen/corner_radius_50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/iv_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/logo_log_out"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_logout_24" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lay_marstar_16"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/logout"
+                android:textSize="@dimen/ts_16"
+                app:layout_constraintBottom_toBottomOf="@+id/card_logout"
+                app:layout_constraintStart_toEndOf="@+id/card_logout"
+                app:layout_constraintTop_toTopOf="@+id/card_logout"
+                app:layout_constraintVertical_bias="0.17" />
+
+            <TextView
+                android:id="@+id/tv_logout_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:text="@string/sure_want_to_logout"
+                android:textSize="@dimen/ts_13"
+                app:layout_constraintBottom_toBottomOf="@+id/card_logout"
+                app:layout_constraintStart_toStartOf="@+id/tv_logout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_logout"
+                app:layout_constraintVertical_bias="0.518" />
+
+            <ImageView
+                android:id="@+id/arrow_logout"
+                android:layout_width="@dimen/lay_img_arrow_width"
+                android:layout_height="@dimen/lay_img_arrow_height"
+                android:layout_marginEnd="@dimen/lay_marend_16"
+                android:src="@drawable/baseline_arrow_forward_ios_24"
+                android:contentDescription="@string/arrow_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/card_logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_logout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_army"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_material"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_card_height_353"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:layout_marginHorizontal="@dimen/lay_marhor_16"
+            app:cardBackgroundColor="@color/white_green"
+            app:cardCornerRadius="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+        <TextView
+            android:id="@+id/tv_welcome_to_ai_powered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/welocome_to_ai_powered"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_24"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+            app:layout_constraintStart_toStartOf="@+id/cardView6"
+            app:layout_constraintTop_toTopOf="@+id/card_material" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/diabetes_detection_app"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_24"
+            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+            app:layout_constraintStart_toStartOf="@+id/cardView6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_to_ai_powered" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lay_martop_16"
+            android:elevation="2dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/we_are_here_to_help_you_nmonitor_your_health_with_ease_nand_precision"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_16"
+            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+            app:layout_constraintStart_toStartOf="@+id/cardView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next_onboarding"
+            android:layout_width="@dimen/button_width_356"
+            android:layout_height="@dimen/button_height_50"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="@dimen/lay_marbot_16"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_button_24"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView6"
+            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="@+id/cardView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="410dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

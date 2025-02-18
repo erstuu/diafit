@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lay_martop_130"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/login"
+            android:textSize="@dimen/ts_52"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lay_marstar_16"
+            android:layout_marginTop="@dimen/lay_martop_16"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/email"
+            android:textSize="@dimen/ts_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lay_martop_8"
+            android:layout_marginHorizontal="@dimen/lay_marhor_16"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_email"
+                android:layout_width="@dimen/lay_ti_width"
+                android:layout_height="@dimen/lay_ti_height"
+                android:layout_marginTop="@dimen/lay_martop_8"
+                android:background="@drawable/rounded_text_input_layout"
+                android:fontFamily="@font/nunito_bold"
+                android:hint="@string/input_your_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lay_marstar_16"
+            android:layout_marginTop="@dimen/lay_martop_16"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/password"
+            android:textSize="@dimen/ts_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_email" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lay_martop_8"
+            android:layout_marginHorizontal="@dimen/lay_marhor_16"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_password"
+                android:layout_width="@dimen/lay_ti_width"
+                android:layout_height="@dimen/lay_ti_height"
+                android:layout_marginTop="@dimen/lay_martop_8"
+                android:background="@drawable/rounded_text_input_layout"
+                android:fontFamily="@font/nunito_bold"
+                android:hint="@string/input_your_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/padding_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="@dimen/button_width_380"
+            android:layout_height="@dimen/button_height_50"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_24"
+            app:layout_constraintEnd_toEndOf="@+id/tl_password"
+            app:layout_constraintStart_toStartOf="@+id/tl_password"
+            app:layout_constraintTop_toBottomOf="@+id/tl_password" />
+
+        <TextView
+            android:id="@+id/ask_register_if_havent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/dont_have_account"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <TextView
+            android:id="@+id/register_if_havent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:padding="4dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/sign_up"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ask_register_if_havent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

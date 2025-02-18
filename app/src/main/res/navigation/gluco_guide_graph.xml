@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gluco_guide_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.health.diafit.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_inputDataFragment"
+            app:destination="@id/inputDataFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_preferenceFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputDataFragment"
+        android:name="com.health.diafit.ui.fragment.inputdata.InputDataFragment"
+        android:label="InputDataFragment"
+        tools:layout="@layout/fragment_input_data">
+        <action
+            android:id="@+id/action_inputDataFragment_to_inputDataAdvancedFragment"
+            app:destination="@id/inputDataAdvancedFragment"/>
+        <argument
+            android:name="showBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputDataAdvancedFragment"
+        android:name="com.health.diafit.ui.fragment.inputdata.InputDataAdvancedFragment"
+        android:label="InputDataAdvancedFragment"
+        tools:layout="@layout/fragment_input_data_advanced">
+        <argument
+            android:name="userData"
+            app:argType="com.health.diafit.data.remote.request.UserData" />
+        <argument
+            android:name="showBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_inputDataAdvancedFragment_to_resultFragment"
+            app:destination="@id/resultFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.health.diafit.ui.fragment.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="userDataPredict"
+            app:argType="com.health.diafit.data.remote.request.UserDataPredict" />
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/homeFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_resultFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.health.diafit.ui.fragment.news.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news_dia">
+
+        <argument
+            android:name="news"
+            app:argType="com.health.diafit.data.remote.response.WebLink" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.health.diafit.ui.fragment.profile.ProfileFragment"
+        android:label="PreferenceFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.health.diafit.ui.fragment.history.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.health.diafit.ui.fragment.editprofile.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+
+        <argument
+            android:name="usernameAndToken"
+            app:argType="string" />
+    </fragment>
+</navigation>

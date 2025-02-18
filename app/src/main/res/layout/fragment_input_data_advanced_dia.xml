@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/diaPrimary"
+                app:title="@string/input_data"
+                app:titleTextAppearance="@style/ToolbarTitleText" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewInputData"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/lay_card_height_312"
+            android:layout_marginTop="@dimen/lay_martop_88"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="@dimen/corner_radius_26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_body_mass_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_16"
+                    android:layout_marginTop="@dimen/lay_martop_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/body_mass_index"
+                    android:textSize="@dimen/ts_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputBodyMassIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    app:hintEnabled="false"
+                    app:layout_constraintStart_toStartOf="@+id/tv_body_mass_index"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_body_mass_index">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_body_mass_index"
+                        android:layout_width="@dimen/lay_ti_width_336"
+                        android:layout_height="@dimen/lay_ti_height_50"
+                        android:layout_marginTop="@dimen/lay_martop_8"
+                        android:background="@drawable/rounded_text_input_layout"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/enter_your_bmi"
+                        android:inputType="number"
+                        android:padding="@dimen/padding_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_hemoglobin_a1c_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_16"
+                    android:layout_marginTop="@dimen/lay_martop_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/hemoglobin_a1c_level"
+                    android:textSize="@dimen/ts_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputBodyMassIndex" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputHemoglobinA1cLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    app:hintEnabled="false"
+                    app:layout_constraintStart_toStartOf="@+id/tv_hemoglobin_a1c_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hemoglobin_a1c_level">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_hemoglobin_a1c_level"
+                        android:layout_width="@dimen/lay_ti_width_336"
+                        android:layout_height="@dimen/lay_ti_height_50"
+                        android:layout_marginTop="@dimen/lay_martop_8"
+                        android:background="@drawable/rounded_text_input_layout"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/enter_your_hba1c"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_glucose_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_16"
+                    android:layout_marginTop="@dimen/lay_martop_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/blood_glucose_evel"
+                    android:textSize="@dimen/ts_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputHemoglobinA1cLevel" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputGlucoseLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    app:hintEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_glucose_level"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_glucose_level"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_glucose_level"
+                        android:layout_width="@dimen/lay_ti_width_336"
+                        android:layout_height="@dimen/lay_ti_height_50"
+                        android:layout_marginTop="@dimen/lay_martop_8"
+                        android:background="@drawable/rounded_text_input_layout"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/enter_your_glucose_level"
+                        android:inputType="number"
+                        android:padding="@dimen/padding_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/doubleCheckCard"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/lay_card_height_220"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewInputData"
+            app:layout_constraintStart_toStartOf="@+id/cardViewInputData"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_double_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lay_marstar_16"
+                    android:layout_marginTop="@dimen/lay_martop_40"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/double_check_your_information"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:layout_marginBottom="@dimen/lay_marbot_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/make_sure_everything_is_correct_before_proceeding."
+                    android:textSize="@dimen/ts_22"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_double_check"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_double_check" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/readyCard"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/lay_card_height_150"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewInputData"
+            app:layout_constraintStart_toStartOf="@+id/cardViewInputData"
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_all_set_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/all_set_up"
+                    android:textSize="@dimen/ts_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lay_martop_8"
+                    android:layout_marginBottom="@dimen/lay_marbot_16"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/you_are_ready_to_go"
+                    android:textSize="@dimen/ts_22"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_all_set_up"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_all_set_up"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="@dimen/lay_card_width_380"
+            android:layout_height="@dimen/button_height_50"
+            android:layout_marginTop="@dimen/lay_martop_16"
+            android:layout_marginBottom="@dimen/lay_marbot_16"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_button_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/readyCard"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/readyCard"
+            app:layout_constraintTop_toBottomOf="@+id/readyCard"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="371dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="562dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
